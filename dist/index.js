@@ -60,12 +60,12 @@ var messages_en = {
 	"cmr_cs.table": "Table Check ({count})",
 	"cmr_cs.duplicateTableList": "Duplicate  ({count})",
 	"cmr_cs-list.null": "All",
-	"cmr_cs-list.new": "New",
-	"cmr_cs-list.used": "Used",
-	"cmr_cs-list.cancel": "Cancel",
-	"cmr_cs.new": "New",
-	"cmr_cs.used": "Used",
-	"cmr_cs.cancel": "Cancel",
+	"cmr_cs-list.New": "New",
+	"cmr_cs-list.Used": "Used",
+	"cmr_cs-list.Cancel": "Cancel",
+	"cmr_cs.New": "New",
+	"cmr_cs.Used": "Used",
+	"cmr_cs.Cancel": "Cancel",
 	"cmr_cs.checknum": "Check Number",
 	"cmr_cs.checkstate": "Check Status",
 	"cmr_cs.checkdate": "Check Creation Date",
@@ -130,13 +130,13 @@ var messages_fr = {
 	"cmr_cs.DuplicateImport": " Les cheques present dans le fichier ont été importés. Liste des doublons détecté :  ",
 	"cmr_cs.dateFrom": "De",
 	"cmr_cs.dateTo": "A",
-	"cmr_cs.new": "Nouveau",
-	"cmr_cs.used": "Utilisé",
-	"cmr_cs.cancel": "Annulé",
+	"cmr_cs.New": "Nouveau",
+	"cmr_cs.Used": "Utilisé",
+	"cmr_cs.Cancel": "Annulé",
 	"cmr_cs-list": "Statut cheque",
-	"cmr_cs-list.new": "Nouveau",
-	"cmr_cs-list.used": "Utilisé",
-	"cmr_cs-list.cancel": "Annulé",
+	"cmr_cs-list.New": "Nouveau",
+	"cmr_cs-list.Used": "Utilisé",
+	"cmr_cs-list.Cancel": "Annulé",
 	"cmr_cs-list.null": "Tous",
 	"cmr_cs.chequeNo": "Numéro Cheque",
 	"chequeStatus.checknum": "Numéro de chèque",
@@ -284,7 +284,7 @@ function reducer() {
   }
 }
 
-var CHEQUE_STATUS = ['new', 'used', 'cancel'];
+var CHEQUE_STATUS = ['New', 'Used', 'Cancel'];
 var RIGHT_ADD = 131301;
 
 function _callSuper$b(t, o, e) { return o = _getPrototypeOf__default["default"](o), _possibleConstructorReturn__default["default"](t, _isNativeReflectConstruct$b() ? Reflect.construct(o, e || [], _getPrototypeOf__default["default"](t).constructor) : o.apply(t, e)); }
@@ -826,7 +826,7 @@ var ChequeImportPage = /*#__PURE__*/function (_Component) {
           contentModal: "cmr_cs.currentlyImporting"
         });
         var reponseUpload = /*#__PURE__*/function () {
-          var _ref = _asyncToGenerator__default["default"](/*#__PURE__*/_regeneratorRuntime__default["default"].mark(function _callee() {
+          var _ref = _asyncToGenerator__default["default"]( /*#__PURE__*/_regeneratorRuntime__default["default"].mark(function _callee() {
             return _regeneratorRuntime__default["default"].wrap(function _callee$(_context) {
               while (1) switch (_context.prev = _context.next) {
                 case 0:
@@ -1312,7 +1312,7 @@ var AuthChequeDialog = function AuthChequeDialog(_ref) {
     setIsAuthenticating(false);
   };
   var onSubmit = /*#__PURE__*/function () {
-    var _ref2 = _asyncToGenerator__default["default"](/*#__PURE__*/_regeneratorRuntime__default["default"].mark(function _callee2(e) {
+    var _ref2 = _asyncToGenerator__default["default"]( /*#__PURE__*/_regeneratorRuntime__default["default"].mark(function _callee2(e) {
       var reponseLogin;
       return _regeneratorRuntime__default["default"].wrap(function _callee2$(_context2) {
         while (1) switch (_context2.prev = _context2.next) {
@@ -1321,7 +1321,7 @@ var AuthChequeDialog = function AuthChequeDialog(_ref) {
             setIsAuthenticating(true);
             try {
               reponseLogin = /*#__PURE__*/function () {
-                var _ref3 = _asyncToGenerator__default["default"](/*#__PURE__*/_regeneratorRuntime__default["default"].mark(function _callee() {
+                var _ref3 = _asyncToGenerator__default["default"]( /*#__PURE__*/_regeneratorRuntime__default["default"].mark(function _callee() {
                   return _regeneratorRuntime__default["default"].wrap(function _callee$(_context) {
                     while (1) switch (_context.prev = _context.next) {
                       case 0:
