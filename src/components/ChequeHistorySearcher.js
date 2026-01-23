@@ -4,19 +4,12 @@ import { connect } from "react-redux";
 import { injectIntl } from "react-intl";
 import _ from "lodash";
 import { withTheme, withStyles } from "@material-ui/core/styles";
-import { IconButton, Typography, Tooltip } from "@material-ui/core";
 import { Searcher } from "@openimis/fe-core";
-import TabIcon from "@material-ui/icons/Tab";
 import { fetchCheckModificationHistory } from "../actions"
-import ChequeFilter from "./ChequeFilter";
 import {
   withModulesManager,
   formatMessageWithValues,
-  formatMessage,
   formatDateFromISO,
-  formatAmount,
-  FormattedMessage,
-  PublishedComponent,
 } from "@openimis/fe-core";
 
 

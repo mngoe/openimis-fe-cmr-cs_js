@@ -4,22 +4,15 @@ import { connect } from "react-redux";
 import { injectIntl } from "react-intl";
 import _ from "lodash";
 import { withTheme, withStyles } from "@material-ui/core/styles";
-import { IconButton, Typography, Tooltip } from "@material-ui/core";
 import { Searcher } from "@openimis/fe-core";
-import TabIcon from "@material-ui/icons/Tab";
-import { fetchCheques, fetchChequeSummaries } from "../actions"
+import { fetchChequeSummaries } from "../actions"
 import ChequeFilter from "./ChequeFilter";
 import {
   withModulesManager,
   formatMessageWithValues,
   formatMessage,
   formatDateFromISO,
-  formatAmount,
-  FormattedMessage,
-  PublishedComponent,
 } from "@openimis/fe-core";
-
-const CHEQUE_SEARCHER_CONTRIBUTION_KEY = "cheque.Searcher";
 
 const styles = (theme) => ({});
 
@@ -76,7 +69,6 @@ class ChequeSearcher extends Component {
         prms.push(`before: "${state.beforeCursor}"`);
       }
     }
-    console.log("params ", prms)
     return prms;
   };
 
@@ -136,7 +128,6 @@ class ChequeSearcher extends Component {
     if (!count) {
       count = myChequesPageInfo.totalCount;
     }
-    console.log("cheque searcher props ", this.props)
     return (
       <Fragment>
         <Searcher
