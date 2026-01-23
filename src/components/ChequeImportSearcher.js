@@ -121,7 +121,7 @@ class ChequeImportSearcher extends Component {
                     itemFormatters={this.itemFormatters}
                     headers={this.headers}
                     filtersToQueryParams={this.query}
-                    defaultOrderBy="-chequeimportline"
+                    defaultOrderBy="chequeimportline"
                     tableTitle={formatMessageWithValues(intl, "CmrCS", "cmr_cs.tableImport",
                         { count: count })}
                 />
