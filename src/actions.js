@@ -35,10 +35,10 @@ export function fetchChequeSummaries(mm, filters) {
     return graphql(payload, "CMS_CS_CHECKLIST");
 }
 
-export function fetchChequesImport() {
+export function fetchChequesImport(filters) {
     const payload = formatPageQueryWithCount(
         "chequeimport",
-        null,
+        filters,
         ["idChequeImport", "importDate", "storedFile"]
     );
     return graphql(payload, 'CMS_CS_CHECKIMPORT');
