@@ -36,7 +36,6 @@ class ChequeHistoryPage extends Component {
       }
     componentDidMount() {
         this.query();
-        this.props.fetchCheckModificationHistory()
         // const storedData = localStorage.getItem('duplicatesCheque');
         // if (storedData) {
         //   const parsedData = JSON.parse(storedData);

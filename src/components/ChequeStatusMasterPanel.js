@@ -54,7 +54,7 @@ class ChequeStatusMasterPanel extends FormPanel {
         <Grid container className={classes.item}>
 
           <Grid item xs={4} className={classes.item}>
-            <NumberInput
+            <TextInput
               module="cmr_cs"
               label={formatMessage(intl, "cmr_cs", "chequeStatus.checknum")}
               required={true}

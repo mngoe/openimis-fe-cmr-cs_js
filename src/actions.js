@@ -35,10 +35,10 @@ export function fetchChequeSummaries(mm, filters) {
     return graphql(payload, "CMS_CS_CHECKLIST");
 }
 
-export function fetchChequesImport() {
+export function fetchChequesImport(filters) {
     const payload = formatPageQueryWithCount(
         "chequeimport",
-        null,
+        filters,
         ["idChequeImport", "importDate", "storedFile"]
     );
     return graphql(payload, 'CMS_CS_CHECKIMPORT');
@@ -53,7 +53,6 @@ export function updateChequeStatus(mm, chequeStatus, clientMutationLabel, idCheq
         clientMutationLabel, idChequeImportLine,
         requestedDateTime
     });
-
 }
 
 export function formatChequeStatusGQL(mm, chequeStatus) {
@@ -70,32 +69,41 @@ function capitalizeFirstLetter(String){
     return String.charAt(0).toUpperCase() +String.slice(1)
 }
 
+export function fetchCheckModificationHistory(filters) {
 
-export function fetchCheckModificationHistory() {
-    const payload =
-        `query {
-        ChequeUpdatedHistories {
-        edges {
-        node {
-        id
-        idChequeUpdated
-        chequeImportLine{
-        id
-        idChequeImportLine
-        chequeImportLineCode
+    const validFilters = !!filters && Array.isArray(filters) && filters.length
+        ? filters.join(", ")
+        : "";
+    const payload = `
+    query {
+        ChequeUpdatedHistories(${validFilters}) {
+            totalCount
+            edges {
+                node {
+                    id
+                    idChequeUpdated
+                    chequeImportLine {
+                        id
+                        idChequeImportLine
+                        chequeImportLineCode
+                    }
+                    user {
+                        loginName
+                    }
+                    updatedDate
+                    description
+                }
+            }
+            pageInfo {
+                endCursor
+                hasNextPage
+                hasPreviousPage
+                startCursor
+            }
         }
-        user{
-        loginName
-        }
-        updatedDate
-        description
-        }
-        }
-        }
-        }`
+    }
+`;
 
+    console.log("payload cheque table ", filters)
     return graphql(payload, 'HISTORY_CHEQUE')
 }
-
-  
-

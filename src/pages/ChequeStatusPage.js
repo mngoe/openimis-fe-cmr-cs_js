@@ -24,7 +24,6 @@ const styles = theme => ({
 class ChequeStatusPage extends Component {
 
     save = (chequeStatus) => {
-
             this.props.updateChequeStatus(
               this.props.modulesManager,
               chequeStatus,

@@ -36,6 +36,7 @@ const DEFAULT_CONFIG = {
     { key: "cmr_cs.DuplicateChequeListPage", ref: ROUTE_CMR_CS_DUPLICATE_LIST },
     { key: "cmr_cs.ChequeHistoryPage", ref: ROUTE_CMR_CS_HISTORY}
   ],
+
   "reports":[
     {
       key: "invoice_fosa_cs",
@@ -237,7 +238,6 @@ const DEFAULT_CONFIG = {
     { path: ROUTE_CMR_STATUS + '/:cheque_code', component: ChequeStatusPage },
     { path: ROUTE_CMR_CS_DUPLICATE_LIST, component: DuplicateChequeListPage },
     { path: ROUTE_CMR_CS_HISTORY, component: ChequeHistoryPage },
-
   ],
 }
 
